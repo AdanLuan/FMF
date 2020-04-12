@@ -5,17 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class App extends Application {
     
     private static Scene scene;
-    private Cofrinho cofre = new Cofrinho();
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../res/App.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/App.fxml"));
         stage.setTitle("Meu Cofre");
         scene = new Scene( root, 500, 400);
         stage.setScene(scene);

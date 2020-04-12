@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AppController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.AppController">
    <children>
       <Button fx:id="btnDepositar" layoutX="273.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#btnDepositarClick" text="Depositar" />
       <Label layoutX="26.0" layoutY="60.0" text="Nome Moeda:">
@@ -64,8 +64,8 @@
       </Label>
       <TableView fx:id="tblDepositos" layoutX="26.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="104.0" text="Moeda" />
-          <TableColumn editable="false" prefWidth="95.0" resizable="false" sortable="false" text="Valor" />
+          <TableColumn fx:id="colMoeda" editable="false" prefWidth="100.0" resizable="false" text="Moeda" />
+          <TableColumn fx:id="colValor" editable="false" prefWidth="100.0" resizable="false" text="Valor" />
         </columns>
       </TableView>
    </children>

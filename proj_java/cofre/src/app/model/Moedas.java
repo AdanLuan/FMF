@@ -1,4 +1,4 @@
-package app;
+package app.model;
 
 public interface Moedas {
 	public String getNome();

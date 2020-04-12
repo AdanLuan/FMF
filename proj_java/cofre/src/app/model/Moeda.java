@@ -1,4 +1,4 @@
-package app;
+package app.model;
 
 public class Moeda implements Moedas {
     private String nome;
