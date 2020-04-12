@@ -11,12 +11,13 @@ import java.io.IOException;
 public class App extends Application {
     
     private static Scene scene;
+    private Cofrinho cofre = new Cofrinho();
 
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../res/App.fxml"));
         stage.setTitle("Meu Cofre");
-        scene = new Scene( root, 640, 480);
+        scene = new Scene( root, 500, 400);
         stage.setScene(scene);
         stage.show();
     }

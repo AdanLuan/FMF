@@ -5,38 +5,68 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AppController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AppController">
    <children>
-      <Button fx:id="btnDepositar" layoutX="282.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#btnDepositarClick" text="Depositar" />
-      <ChoiceBox layoutX="65.0" layoutY="85.0" prefWidth="150.0" />
-      <Label layoutX="41.0" layoutY="62.0" text="Selecione a moeda:">
+      <Button fx:id="btnDepositar" layoutX="273.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#btnDepositarClick" text="Depositar" />
+      <Label layoutX="26.0" layoutY="60.0" text="Nome Moeda:">
          <font>
             <Font name="Trebuchet MS" size="14.0" />
          </font>
       </Label>
-      <Separator layoutX="8.0" layoutY="129.0" prefHeight="7.0" prefWidth="581.0" />
-      <Separator layoutX="10.0" layoutY="41.0" prefHeight="7.0" prefWidth="581.0" />
+      <Separator layoutX="6.0" layoutY="127.0" prefHeight="7.0" prefWidth="482.0" />
+      <Separator layoutX="10.0" layoutY="41.0" prefHeight="7.0" prefWidth="482.0" />
       <Label layoutX="14.0" layoutY="14.0" text="Meu cofrinho">
          <font>
             <Font name="Trebuchet MS" size="22.0" />
          </font>
       </Label>
-      <ListView layoutX="26.0" layoutY="167.0" prefHeight="200.0" prefWidth="200.0" />
-      <Label layoutX="26.0" layoutY="143.0" text="Depositos">
+      <Label layoutX="26.0" layoutY="141.0" text="Depositos:">
          <font>
             <Font name="Trebuchet MS" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="291.0" layoutY="143.0" text="Total Disponível">
+      <Label layoutX="265.0" layoutY="140.0" text="Total Moedas Depositado:">
          <font>
             <Font name="Trebuchet MS" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblTotalDisponivel" alignment="CENTER" layoutX="282.0" layoutY="184.0" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" text="R$ 10,50">
+      <Label fx:id="lblTotalMoedas" alignment="CENTER" layoutX="273.0" layoutY="166.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" text="R$ 10,50">
+         <font>
+            <Font name="Trebuchet MS Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNomeMoeda" layoutX="36.0" layoutY="85.0" onKeyTyped="#txtMoedaKeyTyped" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="txtValorMoeda" layoutX="160.0" layoutY="85.0" onKeyTyped="#txtValorKeyTyped" prefHeight="25.0" prefWidth="74.0" />
+      <Label layoutX="150.0" layoutY="60.0" text="Valor:">
          <font>
             <Font name="Trebuchet MS" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnRetirar" layoutX="374.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#btnRetirarClick" prefHeight="25.0" prefWidth="67.0" text="Retirar" />
+      <Label layoutX="265.0" layoutY="222.0" text="Moeda Com Maior valor:">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMaiorMoeda" alignment="CENTER" layoutX="273.0" layoutY="247.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" text="R$ 10,50">
+         <font>
+            <Font name="Trebuchet MS Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalDepositado" alignment="CENTER" layoutX="273.0" layoutY="328.0" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #f0f0f0;" text="R$ 10,50">
+         <font>
+            <Font name="Trebuchet MS Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="303.0" text="Total Depositado:">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDepositos" layoutX="26.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="104.0" text="Moeda" />
+          <TableColumn editable="false" prefWidth="95.0" resizable="false" sortable="false" text="Valor" />
+        </columns>
+      </TableView>
    </children>
 </Pane>

@@ -1,3 +1,4 @@
+package app;
 
 public interface Moedas {
 	public String getNome();

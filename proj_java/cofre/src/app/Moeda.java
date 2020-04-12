@@ -1,3 +1,4 @@
+package app;
 
 public class Moeda implements Moedas {
     private String nome;
@@ -15,7 +16,6 @@ public class Moeda implements Moedas {
     @Override
     public void setNome(String nome) {
         this.nome = nome;
-
     }
 
     @Override
@@ -23,7 +23,9 @@ public class Moeda implements Moedas {
         this.valor = valor;
 
     }
+    public Moeda(){
 
+    }
     public Moeda(String nome,float valor){
         this.nome = nome;
         this.valor = valor;
